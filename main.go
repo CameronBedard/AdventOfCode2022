@@ -3,5 +3,5 @@ package main
 //import "fmt"
 
 func main() {
-	day15p2()
+	day18p2()
 }
