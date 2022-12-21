@@ -52,7 +52,7 @@ func day21p2() {
 
 	m["humn"] = strconv.Itoa(3555057453229)
 	fmt.Println(rootEquality(m, "root"))
-	fmt.Println("another bug.. multiple valid answers... it wants the lowest one")
+	fmt.Println("another bug.. multiple valid answers (due to integer division)... it only accepts the lowest one")
 
 	timeElapsed := time.Since(start)
 	fmt.Println("This function took", timeElapsed)
