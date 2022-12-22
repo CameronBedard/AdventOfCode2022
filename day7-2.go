@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func day7p1() {
+func day7p2() {
 	// Open the file.
 	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs/day7.txt")
 	if err != nil {
@@ -53,10 +53,13 @@ func day7p1() {
 		}
 	}
 
+	//have 70M, need 30M free space, total taken is 43.3M (rootSum)
+	//select min directory for which rootSum - (directory) < 40M
 	//search tree
 	queue := make([]folder, 0)
 	queue = append(queue, root)
-	total := 0
+	total := folderSumBFS(root)
+	min := 70000000
 
 	for len(queue) != 0 {
 		curr := queue[0]
@@ -67,41 +70,18 @@ func day7p1() {
 			queue = append(queue, *curr.children[i])
 		}
 
-		if sum <= 100000 {
-			total += sum
+		if total-sum < 40000000 {
+			if sum < min {
+				min = sum
+			}
 		}
 	}
 
-	fmt.Println("total: ", total)
+	fmt.Println("min directory: ", min)
 
 	// Check for any errors that occurred while reading the file.
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Error reading from file:", err)
 		return
 	}
-}
-
-type folder struct {
-	name     string
-	parent   *folder
-	children []*folder
-	size     int
-}
-
-func folderSumBFS(root folder) int {
-	queue := make([]folder, 0)
-	queue = append(queue, root)
-	sum := 0
-
-	for len(queue) != 0 {
-		curr := queue[0]
-		queue = queue[1:]
-		sum += curr.size
-
-		for i := 0; i < len(curr.children); i++ {
-			queue = append(queue, *curr.children[i])
-		}
-	}
-
-	return sum
 }
