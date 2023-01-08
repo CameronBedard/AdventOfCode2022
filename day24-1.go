@@ -57,14 +57,14 @@ func day24p1() {
 		}
 	}
 
-	fmt.Println("total:", traverseField(field, blizzards, start, end))
+	fmt.Println("total:", blizzardBFS(field, blizzards, start, end))
 }
 
 func inBounds(field []string, pos Point) bool {
 	return pos.x >= 0 && pos.x < len(field[0]) && pos.y >= 0 && pos.y < len(field)
 }
 
-func traverseField(field []string, blizzards []Blizzard, start, target Point) int {
+func blizzardBFS(field []string, blizzards []Blizzard, start, target Point) int {
 	minutes := 0
 	currentStep := make(map[Point]bool)
 	currentStep[start] = true
@@ -113,7 +113,7 @@ var (
 	RIGHT = Point{0, 1}
 )
 
-var directions []Point = []Point{
+var directions = []Point{
 	UP,
 	DOWN,
 	LEFT,

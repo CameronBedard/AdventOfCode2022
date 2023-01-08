@@ -57,7 +57,7 @@ func day24p2() {
 		}
 	}
 
-	fmt.Println("total:", traverseField(field, blizzards, start, end)+
-		traverseField(field, blizzards, end, start)+
-		traverseField(field, blizzards, start, end))
+	fmt.Println("total:", blizzardBFS(field, blizzards, start, end)+
+		blizzardBFS(field, blizzards, end, start)+
+		blizzardBFS(field, blizzards, start, end))
 }
