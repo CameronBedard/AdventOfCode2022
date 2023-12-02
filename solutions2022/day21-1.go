@@ -10,7 +10,7 @@ import (
 
 func day21p1() {
 	// Open the file.
-	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs/day21.txt")
+	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs2022/day21.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return

@@ -22,3 +22,7 @@ go.work
 
 #IntelliJ Project
 .idea
+
+# txt input files
+/inputs2022
+/inputs2023

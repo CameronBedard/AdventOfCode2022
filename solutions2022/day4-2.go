@@ -15,7 +15,7 @@ type Pair struct {
 
 func day4p2() {
 	// Open the file.
-	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs/day4.txt")
+	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs2022/day4.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return

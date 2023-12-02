@@ -34,7 +34,7 @@ func (s *Stack) Pop() (string, bool) {
 
 func day5p1() {
 	// Open the file.
-	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs/day5.txt")
+	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs2022/day5.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
