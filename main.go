@@ -1,5 +1,7 @@
 package main
 
+import "AOC2022/solutions2022"
+
 func main() {
-	day22p1()
+	solutions2022.Day22p1()
 }
