@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	solutions2023.Day4p2()
+	solutions2023.Day5p2()
 }
