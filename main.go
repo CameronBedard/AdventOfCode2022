@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs2023/day12.txt")
+	file, err := os.Open("/Users/cameron.bedard/Documents/FunRepos/AdventOfCode2022/inputs2023/day13.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
@@ -23,5 +23,5 @@ func main() {
 		lines = append(lines, scanner.Text())
 	}
 
-	solutions2023.Day12p2(lines)
+	solutions2023.Day13p2(lines)
 }
